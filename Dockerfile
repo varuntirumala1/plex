@@ -23,10 +23,11 @@ PLEX_MEDIA_SERVER_INFO_DEVICE="Docker Container (LinuxServer.io)"
 
 RUN \
  echo "**** install runtime packages ****" && \
- apt-get update && \
+ apt-get update && apt-get dist-upgrade -y && \
  apt-get install -y \
 	beignet-opencl-icd \
 	jq \
+	iptables \
 	ocl-icd-libopencl1 \
 	udev \
 	unrar \
