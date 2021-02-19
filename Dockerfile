@@ -41,9 +41,13 @@ RUN \
 	curl -o "/opencl-intel/$(basename ${i})" \
 		-L "${i}"; \
  done && \
- wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb && \
  dpkg -i /opencl-intel/*.deb && \
  rm -rf /opencl-intel && \
+ echo "**** install cloudflared ****" && \
+ mkdir -p /cloudflared-temp && \
+ wget wget -O /cloudflared-temp/cloudflared-stable-linux-amd64.deb https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb &&  \
+ dpkg -i /cloudflared-temp/*.deb && \
+ rm -rf /cloudflared-temp && \
  echo "**** install plex ****" && \
  if [ -z ${PLEX_RELEASE+x} ]; then \
  	PLEX_RELEASE=$(curl -sX GET 'https://plex.tv/api/downloads/5.json' \
