@@ -29,6 +29,7 @@ RUN \
 	jq \
 	iptables \
 	ocl-icd-libopencl1 \
+	nano \
 	udev \
 	unrar \
 	wget && \
