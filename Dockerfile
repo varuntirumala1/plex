@@ -41,6 +41,7 @@ RUN \
 	curl -o "/opencl-intel/$(basename ${i})" \
 		-L "${i}"; \
  done && \
+ wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb && \
  dpkg -i /opencl-intel/*.deb && \
  rm -rf /opencl-intel && \
  echo "**** install plex ****" && \
