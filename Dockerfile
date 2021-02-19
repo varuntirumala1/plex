@@ -45,7 +45,7 @@ RUN \
  rm -rf /opencl-intel && \
  echo "**** install cloudflared ****" && \
  mkdir -p /cloudflared-temp && \
- wget wget -O /cloudflared-temp/cloudflared-stable-linux-amd64.deb https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb &&  \
+ wget -O /cloudflared-temp/cloudflared-stable-linux-amd64.deb https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb &&  \
  dpkg -i /cloudflared-temp/*.deb && \
  rm -rf /cloudflared-temp && \
  echo "**** install plex ****" && \
