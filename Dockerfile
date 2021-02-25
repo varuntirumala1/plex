@@ -74,6 +74,7 @@ COPY root/ /
 # ports and volumes
 EXPOSE 32400/tcp 1900/udp 3005/tcp 5353/udp 8324/tcp 32410/udp 32412/udp 32413/udp 32414/udp 32469/tcp
 VOLUME /config
+VOLUME /argo
 
 COPY ports.sh /usr/local/bin/
 RUN ln -s /usr/local/bin/ports.sh
