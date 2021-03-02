@@ -1,0 +1,6 @@
+  
+steps:
+- name: 'gcr.io/cloud-builders/docker' 
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/plex:$_TAG', '.']
+images: ['gcr.io/$PROJECT_ID/plex:$_TAG']
+timeout: '3600s'
