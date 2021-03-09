@@ -4,3 +4,5 @@ steps:
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/plex:$_TAG', '.']
 images: ['gcr.io/$PROJECT_ID/plex:$_TAG']
 timeout: '3600s'
+options:
+  machineType: 'E2_HIGHCPU_8'
